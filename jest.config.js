@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/packages/cli'],
+  projects: ['<rootDir>/packages/cli', '<rootDir>/packages/generator'],
 };
