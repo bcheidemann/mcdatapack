@@ -1,7 +1,59 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "cli": {
+      "root": "packages/cli",
+      "sourceRoot": "packages/cli/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/cli",
+            "main": "packages/cli/src/main.ts",
+            "tsConfig": "packages/cli/tsconfig.app.json",
+            "assets": ["packages/cli/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "packages/cli/src/environments/environment.ts",
+                  "with": "packages/cli/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "cli:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["packages/cli/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/cli"],
+          "options": {
+            "jestConfig": "packages/cli/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/node"
+  },
+  "defaultProject": "cli"
 }
