@@ -1,5 +1,11 @@
+import {
+  writeFileSync,
+  rmSync,
+  mkdirSync,
+} from 'fs';
+
 export interface FileSystem {
-  writeFileSync(path: string, data: string),
-  readFileSync(path: string),
-  rmSync(path: string),
+  writeFileSync: typeof writeFileSync,
+  rmSync: typeof rmSync,
+  mkdirSync: typeof mkdirSync,
 }

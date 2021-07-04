@@ -33,6 +33,8 @@
   },
   "private": true,
   "dependencies": {
+    "@types/jszip": "^3.4.1",
+    "jszip": "^3.6.0",
     "tslib": "^2.0.0",
     "webpack-shebang-plugin": "^1.1.6"
   },
