@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mcdatapack/filesystem": ["packages/filesystem/src/index.ts"],
       "@mcdatapack/generator": ["packages/generator/src/index.ts"]
     }
   },

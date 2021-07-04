@@ -53,6 +53,27 @@
         }
       }
     },
+    "filesystem": {
+      "root": "packages/filesystem",
+      "sourceRoot": "packages/filesystem/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["packages/filesystem/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/filesystem"],
+          "options": {
+            "jestConfig": "packages/filesystem/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "generator": {
       "root": "packages/generator",
       "sourceRoot": "packages/generator/src",
