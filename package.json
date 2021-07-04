@@ -27,7 +27,9 @@
     "cli": "npm run cli:build && npm run cli:run",
     "cli:run": "./dist/packages/cli/main.js",
     "cli:build": "nx build cli",
-    "cli:build:prod": "nx build cli --prod"
+    "cli:build:prod": "nx build cli --prod",
+    "prettier": "prettier --check \"**/*.ts\"",
+    "prettier:fix": "prettier --write \"**/*.ts\""
   },
   "private": true,
   "dependencies": {
@@ -50,7 +52,7 @@
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "jest": "27.0.3",
-    "prettier": "^2.3.1",
+    "prettier": "2.3.2",
     "ts-jest": "27.0.3",
     "ts-node": "~9.1.1",
     "typescript": "~4.2.4"
