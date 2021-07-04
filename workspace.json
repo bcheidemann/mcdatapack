@@ -79,6 +79,17 @@
       "sourceRoot": "packages/generator/src",
       "projectType": "library",
       "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/generator",
+            "tsConfig": "packages/generator/tsconfig.lib.json",
+            "packageJson": "packages/generator/package.json",
+            "main": "packages/generator/src/index.ts",
+            "assets": ["packages/generator/*.md"]
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
