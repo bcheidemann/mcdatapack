@@ -1,5 +1,5 @@
 {
-  "name": "mcrecipe",
+  "name": "mcdatapack",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -23,11 +23,16 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "cli": "npm run cli:build && npm run cli:run",
+    "cli:run": "./dist/packages/cli/main.js",
+    "cli:build": "nx build cli",
+    "cli:build:prod": "nx build cli --prod"
   },
   "private": true,
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "webpack-shebang-plugin": "^1.1.6"
   },
   "devDependencies": {
     "@nrwl/cli": "12.5.2",

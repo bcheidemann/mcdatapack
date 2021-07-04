@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mcrecipe/generator": ["packages/generator/src/index.ts"]
+      "@mcdatapack/generator": ["packages/generator/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
