@@ -35,6 +35,9 @@
     },
     "generator": {
       "tags": []
+    },
+    "types": {
+      "tags": []
     }
   },
   "workspaceLayout": {

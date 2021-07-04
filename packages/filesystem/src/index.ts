@@ -1,1 +1,2 @@
-export * from './lib/filesystem';
+export * from './lib/types';
+export * from './lib/memory';

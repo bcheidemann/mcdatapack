@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@mcdatapack/filesystem": ["packages/filesystem/src/index.ts"],
-      "@mcdatapack/generator": ["packages/generator/src/index.ts"]
+      "@mcdatapack/generator": ["packages/generator/src/index.ts"],
+      "@mcdatapack/types": ["packages/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
